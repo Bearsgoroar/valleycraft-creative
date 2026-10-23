@@ -37,6 +37,3 @@ services:
         worldguard
     volumes:
       - "./schematics:/data/plugins/WorldEdit/schematics:z"
-    secrets:
-      - rcon_pass
-  restart: unless-stopped
