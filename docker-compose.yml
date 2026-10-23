@@ -5,8 +5,8 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "30000:25565"
-      - "24454:24454/udp"
+      - "30000:25563"
+      - "24453:24453/udp"
     environment:
       EULA: true
       TYPE: PAPER
@@ -18,7 +18,7 @@ services:
       MEMORY: 6G
       LEVEL: "creative"
       SERVER: "creative"
-      WORLD_NAME: "creative"
+      WORLD_NAME: "plots"
       DIFFICULTY: "1"
       LEVEL_TYPE: "flat"
       GENERATOR_SETTINGS: >-
