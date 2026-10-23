@@ -1,16 +1,20 @@
 
 services:
   vc-creative:
-    image: itzg/minecraft-server:26.3
+    image: itzg/minecraft-server:latest
     container_name: main
     tty: true
     stdin_open: true
     ports:
       - "30000:25565"
       - "24454:24454/udp"
-    env_file:
-      - ./config/global_env.env
     environment:
+      EULA: true
+      TYPE: PAPER
+      VERSION: 26.3
+      MAX_PLAYERS: 64
+      MOTD: "You shouldn't see this"
+      USE_AIKAR_FLAGS: true
       MEMORY: "6G"
       LEVEL: "creative"
       SERVER: "creative"
@@ -35,5 +39,11 @@ services:
         voidgen
         worldedit
         worldguard
+      
     volumes:
       - "./schematics:/data/plugins/WorldEdit/schematics:z"
+
+
+
+
+
