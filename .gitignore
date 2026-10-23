@@ -1,0 +1,21 @@
+## Folders
+github/
+plugins/
+schematics/
+secrets/
+servers/
+sql/
+velocity/
+
+## Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+## Env files
+*.env 
+*.secret 

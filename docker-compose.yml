@@ -1,0 +1,43 @@
+
+services:
+  vc-creative:
+    image: itzg/minecraft-server:26.3
+    container_name: main
+    tty: true
+    stdin_open: true
+    ports:
+      - "30000:25565"
+      - "24454:24454/udp"
+    env_file:
+      - ./config/global_env.env
+    environment:
+      MEMORY: "6G"
+      LEVEL: "creative"
+      SERVER: "creative"
+      WORLD_NAME: "creative"
+      DIFFICULTY: "1"
+      LEVEL_TYPE: "flat"
+      GENERATOR_SETTINGS: >-
+        {"biome":"minecraft:plains","layers":[{"block":"minecraft:bedrock","height":1},{"block":"minecraft:dirt","height":62},{"block":"minecraft:grass_block","height":1}]}
+      GENERATE_STRUCTURES: "false"
+      SEED: "-1172713370011937745"
+      MODRINTH_PROJECTS: |
+        axiom-paper-plugin
+        creativeplots
+        decentholograms
+        hdb
+        libertybans
+        luckperms
+        multiverse-core
+        packetevents
+        placeholderapi
+        tab-was-taken
+        voidgen
+        worldedit
+        worldguard
+    volumes:
+      - "./servers/creative:/data"
+      - "./schematics:/data/plugins/WorldEdit/schematics:z"
+    secrets:
+      - rcon_pass
+restart: unless-stopped
