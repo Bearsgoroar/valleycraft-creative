@@ -2,7 +2,7 @@
 services:
   vc-creative:
     image: itzg/minecraft-server:latest
-    container_name: main
+    container_name: vc-creative
     tty: true
     stdin_open: true
     ports:
