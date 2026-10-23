@@ -39,4 +39,4 @@ services:
       - "./schematics:/data/plugins/WorldEdit/schematics:z"
     secrets:
       - rcon_pass
-restart: unless-stopped
+  restart: unless-stopped
