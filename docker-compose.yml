@@ -24,7 +24,6 @@ services:
       GENERATOR_SETTINGS: >-
         {"biome":"minecraft:plains","layers":[{"block":"minecraft:bedrock","height":1},{"block":"minecraft:dirt","height":62},{"block":"minecraft:grass_block","height":1}]}
       GENERATE_STRUCTURES: "false"
-      SEED: "-1172713370011937745"
       MODRINTH_PROJECTS: |
         axiom-paper-plugin
         luckperms
