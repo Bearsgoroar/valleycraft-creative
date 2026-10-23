@@ -31,7 +31,6 @@ services:
         decentholograms
         hdb
         libertybans
-        luckperms
         multiverse-core
         packetevents
         placeholderapi
